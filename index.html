@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dave Prowse — Curriculum Vitae</title>
+<meta name="description" content="Dave Prowse — Strategic cybersecurity executive. Director, Security Software Engineering at Electronic Arts.">
+<meta name="author" content="Dave Prowse">
+
+<meta property="og:title" content="Dave Prowse — Curriculum Vitae">
+<meta property="og:description" content="Strategic cybersecurity executive. Director, Security Software Engineering at Electronic Arts.">
+<meta property="og:type" content="profile">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #161512;
+  --ink-soft: #3a3733;
+  --ink-mute: #6b665f;
+  --paper: #f5f1ea;
+  --paper-warm: #efe9de;
+  --rule: #d9d2c4;
+  --accent: #a8321e;
+  --accent-soft: #c64a32;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter Tight', -apple-system, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+  background-image:
+    radial-gradient(circle at 20% 0%, rgba(168, 50, 30, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 80% 100%, rgba(168, 50, 30, 0.03) 0%, transparent 40%);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 80px 48px 120px;
+}
+
+/* ==== HEADER ==== */
+header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 48px;
+  margin-bottom: 56px;
+  position: relative;
+}
+
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: clamp(48px, 7vw, 76px);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 20px;
+  font-variation-settings: 'opsz' 144;
+}
+
+h1 em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ink-soft);
+}
+
+.tagline {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: var(--ink-soft);
+  max-width: 620px;
+  margin-bottom: 32px;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--ink-mute);
+}
+
+.contact a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.contact a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.contact span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact .dot {
+  width: 4px;
+  height: 4px;
+  background: var(--ink-mute);
+  border-radius: 50%;
+}
+
+/* ==== SECTIONS ==== */
+section {
+  margin-bottom: 72px;
+}
+
+.section-header {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  align-items: baseline;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.section-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  font-variation-settings: 'opsz' 100;
+}
+
+/* ==== STATEMENT ==== */
+.statement {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+}
+
+.statement-body {
+  font-family: 'Fraunces', serif;
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.statement-body p + p {
+  margin-top: 18px;
+}
+
+.statement-body strong {
+  font-weight: 500;
+  color: var(--ink);
+  font-style: italic;
+}
+
+/* ==== EXPERIENCE ==== */
+.role {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  margin-bottom: 56px;
+  position: relative;
+}
+
+.role:last-child {
+  margin-bottom: 0;
+}
+
+.role-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-mute);
+  line-height: 1.7;
+}
+
+.role-meta .dates {
+  color: var(--ink);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.role-meta .scope {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 2px 8px;
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.role-body h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.role-body .company {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ink-mute);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.role-body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.role-body li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.role-body li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.role-body strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.project-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(168, 50, 30, 0.06);
+  padding: 1px 6px;
+  border-radius: 2px;
+  letter-spacing: -0.01em;
+}
+
+/* Earlier roles - condensed */
+.role-condensed {
+  margin-bottom: 32px;
+}
+
+.role-condensed .role-body h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.role-condensed .role-body p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* ==== INTERESTS ==== */
+.interests {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+}
+
+.interests-body {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  margin-top: 96px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-mute);
+  letter-spacing: 0.05em;
+}
+
+footer a {
+  color: var(--ink-mute);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--ink-mute);
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+/* ==== ANIMATIONS ==== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header, section {
+  animation: fadeUp 0.7s ease-out backwards;
+}
+
+header { animation-delay: 0.05s; }
+section:nth-of-type(1) { animation-delay: 0.15s; }
+section:nth-of-type(2) { animation-delay: 0.25s; }
+section:nth-of-type(3) { animation-delay: 0.35s; }
+
+/* ==== PRINT ==== */
+@media print {
+  body {
+    background: white;
+    background-image: none;
+    color: black;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  header, section {
+    animation: none;
+  }
+  a { color: black; }
+  .role { page-break-inside: avoid; }
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 720px) {
+  .container { padding: 48px 24px 80px; }
+  
+  .section-header,
+  .statement,
+  .role,
+  .interests {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .section-num {
+    margin-bottom: 4px;
+  }
+  
+  .role-meta {
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--rule);
+    margin-bottom: 8px;
+  }
+  
+  h1 { font-size: 44px; }
+  .tagline { font-size: 19px; }
+  .statement-body { font-size: 17px; }
+  
+  .contact {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .contact .dot { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <div class="eyebrow">Curriculum Vitae · 2026</div>
+    <h1>Dave <em>Prowse</em></h1>
+    <p class="tagline">Strategic cybersecurity executive building security platforms, teams, and AI-driven defences at global scale.</p>
+    <div class="contact">
+      <span><a href="mailto:dave@prow.se">dave@prow.se</a></span>
+      <span class="dot"></span>
+      <span><a href="tel:+447595048748">+44 (0)7595 048748</a></span>
+      <span class="dot"></span>
+      <span>United Kingdom</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">§ 01 — Profile</div>
+      <h2>Personal Statement</h2>
+    </div>
+    <div class="statement">
+      <div></div>
+      <div class="statement-body">
+        <p>Strategic cybersecurity executive with a proven track record of <strong>transforming security organisations and embedding security at scale</strong>. At Electronic Arts, I lead enterprise-wide security programmes that enable thousands of developers to ship secure games and software to 700 million players without friction.</p>
+        <p>I specialise in building high-impact security teams, creating scalable security platforms, and driving executive-level security strategy in global technology firms. More recently, my focus has expanded into <strong>applying agentic AI and adversarial multi-agent approaches to security</strong> — embedding security directly into developer workflows and evolving vulnerability discovery beyond traditional techniques.</p>
+        <p>My leadership philosophy centres on aligning security with business objectives, leveraging automation and emerging technologies to drive efficiency, and fostering a culture where security is an enabler — not an obstacle.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">§ 02 — Experience</div>
+      <h2>Employment</h2>
+    </div>
+
+    <div class="role">
+      <div class="role-meta">
+        <div class="dates">Jan 2022 — Present</div>
+        <div>4+ yrs</div>
+        <div class="scope">Global</div>
+      </div>
+      <div class="role-body">
+        <h3>Director, Security Software Engineering</h3>
+        <div class="company">Electronic Arts Inc. (EA)</div>
+        <ul>
+          <li>Architected and executed EA's <strong>developer-first security strategy</strong>, embedding security seamlessly into the development lifecycle for thousands of engineers. Advocated security-by-design principles while ensuring security tools were frictionless, fast, and aligned with developer needs.</li>
+          <li>Conceptualised, developed, and launched <span class="project-name">Talos</span> — EA's enterprise-wide security scanning platform providing comprehensive automation across secrets, IaC, SAST, SBOM, licence compliance, and related domains. Fully integrated into CI/CD pipelines, delivering real-time visibility into security posture.</li>
+          <li>Built <span class="project-name">Dashy</span>, EA's gameplay integrity analysis platform, in close partnership with EA Javelin Anticheat. Aggregates telemetry, gameplay statistics, and machine learning models to identify and act on disruptive player behaviour at scale.</li>
+          <li>Led development of <span class="project-name">Pallas</span>, an agentic AI security platform providing signed and verifiable security guidance to developers using tools such as Claude Code, GitHub Copilot, and Windsurf. Delivers context-aware, always-on guidance via lightweight integration points (e.g. CLAUDE.md) alongside on-demand pre-flight checks and automated validation.</li>
+          <li>Designed and built <span class="project-name">Zipline</span>, an adversarial security scanning harness leveraging teams of AI agents to analyse, build, and exploit applications. Implements a multi-stage <strong>FIND → VERIFY → CRITIQUE → JUDGE</strong> loop to simulate real-world attacker behaviour and uncover high-impact vulnerabilities.</li>
+          <li>Built <span class="project-name">EA Guardians</span>, a gamified security awareness and training platform used by every full-time employee. Designed to make security education engaging through interactive learning and real-world scenarios.</li>
+          <li>Developed EA Security's <strong>Docs Portal</strong>, a centralised repository for partner-facing security documentation, improving accessibility and reducing friction in compliance and security engagement.</li>
+          <li>Launched the <strong>EA Security Portal</strong> — a single pane of glass for security tooling, governance, and engagement. Hosts engagement workflows, artefact collection, cheat reporting, and self-service security capabilities.</li>
+          <li>Drove executive-level security strategy, working closely with C-suite leadership, game studio executives, and engineering VPs to align security initiatives with business goals.</li>
+          <li>Scaled EA's security software engineering function — recruiting and mentoring high-performing engineers while fostering a culture of innovation and technical excellence.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-meta">
+        <div class="dates">Oct 2020 — Jan 2022</div>
+        <div>1 yr 4 mo</div>
+        <div class="scope">Global</div>
+      </div>
+      <div class="role-body">
+        <h3>Senior Security Consultant — AWS ProServe, Global Strategic Accounts</h3>
+        <div class="company">Amazon Web Services (AWS) UK Ltd</div>
+        <ul>
+          <li>Worked within AWS's elite Global Strategic Accounts practice, delivering high-impact security transformations for Amazon's top 20 global customers — Fortune 50 companies across healthcare, semiconductor, automotive, and financial services.</li>
+          <li>Led a security risk assessment for <strong>AstraZeneca</strong> in the context of developing COVID-19 vaccines. Assessed their threat landscape against nation-state attackers, providing bespoke recommendations to protect high-value research and vaccine production infrastructure from cyber espionage and IP theft.</li>
+          <li>Served as the security <strong>'Bar Raiser'</strong> for a hyperscale cloud migration on behalf of <strong>Arm</strong>, securing high-performance compute environments used for system-on-chip (SoC) design. Designed governance frameworks, threat models, and cloud-native security controls.</li>
+          <li>Led security strategy for <strong>Mercedes-Benz's</strong> global AWS platform, ensuring mission-critical vehicle sales and backend systems met AWS security best practices. Defined governance, logging and alerting, incident response, data protection, and network security at scale.</li>
+          <li>Partnered directly with CISO-level executives to define long-term cloud security roadmaps, ensuring alignment with regulatory requirements, risk management strategies, and business growth objectives.</li>
+          <li>Acted as a mentor and leader within AWS's Security Area of Depth Programme, training AWS consultants in cloud security best practices and real-world threat modelling.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-meta">
+        <div class="dates">Apr 2019 — Oct 2020</div>
+        <div>1 yr 7 mo</div>
+        <div class="scope">Global</div>
+      </div>
+      <div class="role-body">
+        <h3>Global Director — Product, Automotive &amp; Manufacturing Cybersecurity</h3>
+        <div class="company">Dyson Technology Ltd · Product CISO &amp; Deputy CISO</div>
+        <ul>
+          <li>Appointed <strong>Interim CISO</strong>, leading enterprise-wide security strategy, board-level reporting, and security governance across Dyson's global operations. Transitioned into Deputy CISO and Product CISO, continuing to drive long-term security initiatives and risk management with a specific focus on product and manufacturing security.</li>
+          <li>Defined and executed Dyson's security roadmap, ensuring alignment with business objectives and resilience against emerging cyber threats.</li>
+          <li>Oversaw security governance and maturity development using <strong>NIST CSF and BSIMM</strong>, aligning Dyson's security posture with recognised international standards.</li>
+          <li>Implemented <strong>NIST SP 800-82 (Rev. 3)</strong> for operational technology environments and embedded <strong>NIST 800-53</strong> controls into enterprise and product security practices.</li>
+          <li>Provided executive leadership on cybersecurity risk management and regulatory compliance — covering corporate IT, manufacturing, Connected Car, and Connected Home teams.</li>
+          <li>Established a global centre of excellence for product and manufacturing cybersecurity, overseeing security for embedded software, cloud infrastructure, and operational technology (OT) across Dyson's facilities and contract manufacturers.</li>
+          <li>Built and led a globally distributed cybersecurity team, scaling capabilities across IoT, cloud security, penetration testing, and vulnerability management.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-meta">
+        <div class="dates">Feb 2016 — Apr 2019</div>
+        <div>3 yrs 3 mo</div>
+        <div class="scope">Global</div>
+      </div>
+      <div class="role-body">
+        <h3>Head of Security Architecture</h3>
+        <div class="company">Dyson Technology Ltd</div>
+        <ul>
+          <li>Built Dyson's Security Architecture function from the ground up, scaling from a single security architect to a multi-team department covering security engineering, product security, and offensive security.</li>
+          <li>Led security transformation initiatives — including a cloud security transformation and initiatives that enabled future-of-work and remote working capabilities. This work proved critical in ensuring business continuity during the COVID-19 pandemic.</li>
+          <li>Designed security controls for Dyson's IoT and Connected Home products, navigating complex regulatory requirements and security challenges.</li>
+          <li>Launched Dyson's <strong>Bug Bounty Programme</strong>, improving product security and vulnerability management across consumer devices.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role role-condensed">
+      <div class="role-meta">
+        <div class="dates">Aug 2014 — Feb 2016</div>
+        <div class="scope">UK</div>
+      </div>
+      <div class="role-body">
+        <h3>Network Technical Architect</h3>
+        <div class="company">Atos IT Services UK Ltd</div>
+        <p>Led security architecture for UK government and critical national infrastructure clients. Delivered large-scale data centre security transformations and complex network security upgrades.</p>
+      </div>
+    </div>
+
+    <div class="role role-condensed">
+      <div class="role-meta">
+        <div class="dates">Jun 2013 — Aug 2014</div>
+        <div class="scope">Global</div>
+      </div>
+      <div class="role-body">
+        <h3>Senior Network and Security Engineer</h3>
+        <div class="company">Attenda Ltd (now Ensono)</div>
+        <p>Provided technical leadership in network security, resolving critical incidents and implementing best-practice configurations. Led continuous service improvement initiatives.</p>
+      </div>
+    </div>
+
+    <div class="role role-condensed">
+      <div class="role-meta">
+        <div class="dates">May 2011 — Jun 2013</div>
+        <div class="scope">Global</div>
+      </div>
+      <div class="role-body">
+        <h3>Principal Network Engineer</h3>
+        <div class="company">Symantec.cloud (FKA MessageLabs) · Symantec Corporation</div>
+        <p>Designed and maintained Symantec.cloud's global security scanning infrastructure. Led network security strategy, risk management, and incident response.</p>
+      </div>
+    </div>
+
+    <div class="role role-condensed">
+      <div class="role-meta">
+        <div class="dates">Nov 2006 — Apr 2011</div>
+        <div class="scope">UK</div>
+      </div>
+      <div class="role-body">
+        <h3>Core Services Engineer</h3>
+        <div class="company">Star Technology Services Ltd (now Claranet)</div>
+        <p>Advanced troubleshooting and 3rd-line support for network and security solutions at a UK-based ISP.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">§ 03 — Beyond work</div>
+      <h2>Interests</h2>
+    </div>
+    <div class="interests">
+      <div></div>
+      <div class="interests-body">
+        Passionate about technology, building software, and solving technical challenges — through automation, AI, scripting, or just tinkering with new frameworks and tools. I enjoy coding for fun, exploring new programming languages, and experimenting with ways to make security frictionless for developers. Outside of tech: board games, video games, craft beer, and bad sci-fi (not necessarily in that order). I both watch and perform live music — regularly playing saxophone in big bands across the South West of the UK. Armchair connoisseur of NFL, Rugby Union, and F1. I also love cooking and make a mean Gong Bao chicken. I live in the UK with my wife and two children.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Dave Prowse · CV</span>
+    <span><a href="mailto:dave@prow.se">dave@prow.se</a></span>
+  </footer>
+
+</div>
+
+</body>
+</html>
