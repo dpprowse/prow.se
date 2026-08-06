@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Agent tooling state (machine-local, not part of the site)
+.omc/
+
+# Impeccable working files.
+# The build inputs ARE tracked, so index.html can be regenerated from a fresh
+# clone: build-a2.mjs (generator), content.json (all CV copy), logos.json
+# (base64 company logos), surfaces/ (surface brief), live/config.json.
+# Ignored below: verification screenshots and the generator's own output, which
+# is copied to index.html at the repo root.
+.impeccable/shots/
+.impeccable/options/
